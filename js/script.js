@@ -1,9 +1,17 @@
 
-let num=8;
+let numberOfFolms = prompt('how many films have you watched?','');
 
-const arr = []
+let personalMovieDb = {};
+personalMovieDb.count = numberOfFolms;
+personalMovieDb.movie = {};
+personalMovieDb.actors = {};
+personalMovieDb.gencers = [];
+personalMovieDb.privat = false;
 
-arr[0] +prompt("What is your name?","");
-arr[1] +prompt("How old are you?","");
-arr[2] +prompt("Where are you going?","");
-document.write(arr)
+let lastFilm = prompt('One of last films which have you seen?','');
+let score = prompt('Put your nore','');
+
+personalMovieDb.movie[lastFilm] = lastFilm;
+personalMovieDb.movie.score = score;
+
+console.log(personalMovieDb);
