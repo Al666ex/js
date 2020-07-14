@@ -1,1 +1,1 @@
-console.log("media js hello")
+console.log("media js hello");
