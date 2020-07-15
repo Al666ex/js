@@ -9,7 +9,7 @@ function start(){
     }
 }
 
-start();
+//start();
 
 let personalMovieDb = {
     count : numberOfFilms,
@@ -55,7 +55,7 @@ function showMyDb(hide){
     }
 }
 
-showMyDb(personalMovieDb.privat);
+//showMyDb(personalMovieDb.privat);
 
 
 function writeYourGenres(){
@@ -69,4 +69,4 @@ function writeYourGenres(){
     }
 }
 
-writeYourGenres();
+//writeYourGenres();
