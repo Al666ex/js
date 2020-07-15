@@ -1,9 +1,15 @@
 
 
-let numberOfFilms = '';
-while(numberOfFilms.length <= 0){
-    numberOfFilms = prompt('how many films you watched?','');
+let numberOfFilms;
+
+function start(){
+    numberOfFilms = +prompt('how many films you watched?','');
+    while(numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)){
+        numberOfFilms = +prompt('how many films you watched?','');
+    }
 }
+
+start();
 
 let personalMovieDb = {
     count : numberOfFilms,
