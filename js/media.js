@@ -47,6 +47,7 @@ const solder = {
 
 const john = Object.create(solder);
 john.helloSolder();
+console.log("end test");
 //const john = {
 //    armor : 150
 //};
