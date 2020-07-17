@@ -64,5 +64,5 @@ let personalMovieDb = {
 
 };
 
-console.log(personalMovieDb.toggleVisibleMyDB())
-console.log(personalMovieDb.toggleVisibleMyDB())
+//console.log(personalMovieDb.toggleVisibleMyDB())
+//console.log(personalMovieDb.toggleVisibleMyDB())
