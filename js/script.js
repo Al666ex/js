@@ -43,14 +43,25 @@ let personalMovieDb = {
         }       
     },    
     writeYourGenres : function(){
-        for(let i = 1; i <= 3; i++){
-            const genre = prompt(`Ваш любимый жанр ${i}`,'');
-            if((genre !== '') && (genre !== null)){
-                personalMovieDb.genres[i-1] = genre;
-            } else {
-                console.log("некорректные данные")
-                i--;
+        for(let i = 1; i < 2; i++){
+            // const genre = prompt(`Ваш любимый жанр ${i}`,'');
+            // if((genre !== '') && (genre !== null)){
+            //     personalMovieDb.genres[i-1] = genre;
+            // } else {
+            //     console.log("некорректные данные")
+            //     i--;
+            // }
+
+            const genres = prompt(`Ваши любимые жанры кино введите через запятую`,'').toLowerCase();
+            if((genres !== "") && (genres !== null)){
+                personalMovieDb.genres = genres.split(", ")
+                personalMovieDb.genres.sort()
+            }else {
+                console.log("данные введены не корректно");
+                i--;                
             }
+
+
         }
         personalMovieDb.genres.forEach(function(item,index){
             console.log(`номер ${index+1} жанр ${item} `)
@@ -64,5 +75,29 @@ let personalMovieDb = {
 
 };
 
-//console.log(personalMovieDb.toggleVisibleMyDB())
-//console.log(personalMovieDb.toggleVisibleMyDB())
+
+let one = document.querySelectorAll(".one")
+//one.forEach(item => console.log(item))
+
+let box = document.getElementById("box")
+let tagName = document.getElementsByTagName("button")
+let hearts = document.querySelectorAll(".heart")
+let wrapper = document.querySelector(".wrapper")
+// box.style.backgroundColor = "green";
+// box.style.width = "300px"
+
+// console.dir(tagName)
+// tagName[2].style.borderRadius = "100%"
+// box.style.cssText = "background-color : yellow; width : 55px;"
+
+hearts.forEach(item => {
+    item.style.background = "yellow"
+})
+
+let div = document.createElement("div")
+div.classList.add("black");
+//document.body.append(div)
+//wrapper.append(div)
+//wrapper.prepend(div)
+hearts[0].after(div)
+

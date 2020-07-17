@@ -20,13 +20,13 @@ const copyObjJson = JSON.parse(JSON.stringify(obj))
 const copyObjSpred = {...obj}
 const copyObj = Object.assign(copyObjSpred,copyObjJson)
 
-// copyObj.age = 33;
-// copyObj.colors.one = "white"
-// copyObj.colors.whether.summer = "more hotter!!"
+copyObj.age = 33;
+copyObj.colors.one = "white"
+copyObj.colors.whether.summer = "more hotter!!"
 
-console.log(obj)
-console.log(copyObj)
-copyObj.hello()
+// console.log(obj)
+// console.log(copyObj)
+// copyObj.hello()
 
 // console.log(typeof(parseInt("x15px",10)))
 // console.log(parseInt("15px",10))
