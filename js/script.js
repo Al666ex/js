@@ -83,21 +83,20 @@ let box = document.getElementById("box")
 let tagName = document.getElementsByTagName("button")
 let hearts = document.querySelectorAll(".heart")
 let wrapper = document.querySelector(".wrapper")
-// box.style.backgroundColor = "green";
-// box.style.width = "300px"
+let circle = document.querySelectorAll(".circle")
 
-// console.dir(tagName)
-// tagName[2].style.borderRadius = "100%"
-// box.style.cssText = "background-color : yellow; width : 55px;"
+//circle[1].remove()
 
-hearts.forEach(item => {
-    item.style.background = "yellow"
-})
 
-let div = document.createElement("div")
+hearts.forEach(item => item.style.background = "green")
+
+
+
+let div = document.createElement("div");
+div.innerHTML = "<h1>Hello world</h1>"
 div.classList.add("black");
-//document.body.append(div)
-//wrapper.append(div)
-//wrapper.prepend(div)
-hearts[0].after(div)
+//hearts[1].after(div)
 
+wrapper.prepend(div)
+//document.body.append(div)
+div.insertAdjacentHTML("afterend","<h1>Testing...</h1>")
