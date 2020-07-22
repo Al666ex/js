@@ -14,52 +14,49 @@
 
 'use strict';
 
-const movieDB = {
-    movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
-};
-
-const promoImg = document.querySelectorAll(".promo__adv img"),
-      genre = document.querySelector('.promo__genre'),
-      listMovies = document.querySelector('.promo__interactive-list'),
-      moviesDel = listMovies.querySelectorAll('.promo__interactive-item'),
-      inputMovie = document.querySelector('.promo__interactive .add input[type="text"]'),
-      buttonMovie = document.querySelector('.promo__interactive .add button');
-;
-
-promoImg.forEach(item =>
-    item.remove()
-);
-
-genre.textContent = 'драма';
-
-
-moviesDel.forEach(movie => 
-    movie.remove()
-);
-
-movieDB.movies.forEach((item,index) => {
-    listMovies.innerHTML +=
-    `<li class="promo__interactive-item">${index + 1} ${item}
-        <div class="delete"></div>
-    </li>`;
-});
-
-buttonMovie.addEventListener('click', function(e){
-    e.preventDefault();    
-    movieDB.movies.push(inputMovie.value);    
+    const movieDB = {
+        movies: [
+            "Логан",
+            "Лига справедливости",
+            "Ла-ла лэнд",
+            "Одержимость",
+            "Скотт Пилигрим против..."          
+        ]
+    };
+    
+    const promoImg = document.querySelectorAll(".promo__adv img"),
+          genre = document.querySelector('.promo__genre'),
+          listMovies = document.querySelector('.promo__interactive-list'),
+          moviesDel = listMovies.querySelectorAll('.promo__interactive-item'),
+          inputMovie = document.querySelector('.promo__interactive .add input[type="text"]'),
+          loveMovie = document.querySelector('.promo__interactive .add input[type="checkbox"]'),
+          buttonMovie = document.querySelector('.promo__interactive .add button'),
+          deleteSelectedMovie = document.querySelectorAll('.promo__interactive-item .delete');
+    ;
+    
+    
+    promoImg.forEach(item =>
+        item.remove()
+    );
+    
+    genre.textContent = 'драма';
+    
+    moviesDel.forEach(movie => 
+        movie.remove()
+    );
+    
+    movieDB.movies.forEach((item,index) => {
+        
         listMovies.innerHTML +=
-        `<li class="promo__interactive-item">${movieDB.movies.length} ${inputMovie.value}
+        `<li class="promo__interactive-item">${index + 1} ${item}
             <div class="delete"></div>
-        </li>`;    
-    movieDB.movies.forEach(item => console.log(item));
-    inputMovie.value = null;
-});
+        </li>`;
+    });
+    
+
+    
+
+
 
 
 
